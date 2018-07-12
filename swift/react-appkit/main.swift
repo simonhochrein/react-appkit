@@ -32,7 +32,7 @@ ctx.setObject(PopUpButton.self, forKeyedSubscript: "NSPopUpButton" as NSCopying 
 
 ctx.setObject(Editor.self, forKeyedSubscript: "MyEditor" as NSCopying & NSObjectProtocol)
 
-ctx.evaluateScript(try String(contentsOfFile: "/Users/simonhochrein/Documents/Tinker/Bridge-Test/index.js"));
+ctx.evaluateScript(try String(contentsOfFile: CommandLine.arguments[1]));
 
 let app = NSApplication.shared
 app.setActivationPolicy(.regular)
